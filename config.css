@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  ::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #fff;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 1vw;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3vw;
+    background-color: #e4e7e8;
+  }
+  body {
+    background: #e4e4e4;
+  }
+
+
+  .main-container {
+    width: 100%;
+    padding: 10px 50px;
+    background: #fff;
+    
+  }
+  .logo a {
+    display: flex;
+    align-items: center;
+  }
+  .logo a h5 {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+  }
+  .main-container .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-nav {
+    display: flex;
+   
+  }
+  .main-nav nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .main-nav nav ul {
+    display: flex;
+  }
+  .main-nav nav ul li {
+    margin-right: 30px;
+    padding: 15px;
+    position: relative;
+  }
+  .active::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #36a38d;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .main-nav nav ul li a {
+    color: #000;
+    font-weight: 300;
+  }
+  .user-credencials {
+    display: flex;
+    align-items: center;
+  }
+  .user-credencials .user-img {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .user-credencials .user-img img {
+    border-radius: 50%;
+  }
+  .user-credencials .user h5 {
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  .user-credencials .user a {
+    margin-left: 30px;
+    font-size: 12px;
+
+    display: block;
+  }
+  .menu-wrap{
+      display: none;
+  }
+  
+  @media screen and (max-width:980px){
+      .main-container{
+          position: relative;
+      }
+        .main-nav{
+            position: absolute;
+            top: 80px;
+            left:0;
+            padding:0 50px ;
+            display: block;
+            width: 100%;
+            background: rgba(0,0,0,0.1);
+            visibility: hidden;
+        }
+        .active::after{
+            content: "";
+            display: none;
+        }
+        .main-nav nav ul{
+            display: block;
+        }
+        .menu-wrap{
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            z-index: 1;
+          }
+          .menu-wrap .toggler{
+           position: absolute;
+           top: 10px;
+            right: -5px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 2;
+            opacity: 0;
+          }
+          .menu-wrap .hamburger{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            width: 40px;
+            height: 60px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+           .menu-wrap .hamburger > div{
+            position: relative;
+            width: 80%;
+            height: 5px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+          }
+          .menu-wrap .hamburger > div::before, 
+          .menu-wrap .hamburger > div::after{
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: -10px;
+            width: 100%;
+            height: 5px;
+            background-color: #000;
+            border-radius: 5px;
+          }
+          .menu-wrap .hamburger > div::after{
+          top: 10px;
+          }
+          .menu-wrap .toggler:checked + .hamburger > div{
+            transform: rotate(135deg);
+          }
+          .menu-wrap .toggler:checked + .hamburger > div::before,
+          .menu-wrap .toggler:checked + .hamburger > div::after{
+            top: 0;
+            transform: rotate(90deg); 
+          } 
+          .menu-wrap .toggler:checked:hover + .hamburger > div{
+            transform: rotate(225deg);
+          }
+          .h-nav{
+            height: 285px;
+            
+        }
+        .visible{
+            visibility: visible;
+        }
+        
+        
+  }

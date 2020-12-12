@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iCheck-Signup</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Poppins:300,500,600&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* main window (whole screen) */
+
+    .main-container {
+      position: relative;
+    }
+
+    /* main window (whole screen) */
+
+    /* navbar logo */
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 50px;
+      /* background-color: gray; */
+      z-index: 1;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      color: #000;
+      letter-spacing: 1px;
+    }
+
+    .logo a h5 {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    /* navbar logo */
+
+    /* main window for login and register */
+
+    /* left main window (form window) */
+    .main-window {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .sub-window-left {
+      height: 100%;
+      flex-basis: 50%;
+      min-width: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main-form h3 {
+      margin: 20px 0;
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: 2px;
+      color: #36a38d;
+    }
+    .form-control {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .form-control input , .form-control select {
+      display: inline-block;
+      width: 330px;
+      height: 45px;
+      padding: 5px 5px;
+      font-size: 15px;
+      border: 1px solid #36a38d;
+      border-radius: 5px;
+      box-shadow: 0.2px 0.2px 2px #36a38d;
+      text-align: center;
+    }
+
+    .form-control select{
+      color:#c4c4c4;
+      
+    }
+
+    .form-control select:focus{
+      outline: none;
+    }
+
+    .form-control select option{
+      background-color: #fff;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input::placeholder {
+      text-align: center;
+      color: #c4c4c4;
+    }
+
+    .form-control button {
+      margin: 20px;
+      padding: 15px 38px;
+      color: #fff;
+      background: linear-gradient(90deg, #00ecbc, #007adf);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .form-control button:focus {
+      outline: none;
+    }
+
+    .form-control a {
+      color: rgb(180, 112, 223);
+    }
+    /* left main window (form window) */
+
+    /* right main window (form window) */
+
+    .sub-window-right {
+      flex-basis: 50%;
+      min-width: 350px;
+      height: 100%;
+      background-image: linear-gradient(90deg, #00ecbc, #007adf);
+      background-position: center;
+      background-size: cover;
+      
+    }
+
+    .sub-window-right img{
+      width: 100%;
+      height: 100%;
+    }
+    
+
+    /* right main window (form window) */
+
+    /* main window for login and register */
+
+    /* media query for mobile view */
+    @media screen and (max-width: 700px) {
+      .logo {
+        margin: auto;
+      }
+
+      .sub-window-right {
+        display: none;
+      }
+    }
+    /* media query for mobile view */
+  </style>
+  <body>
+    <div class="main-container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"
+            ><img src="./download.png" alt="" width="50px" height="50px" />
+            <h5>iCheck</h5>
+          </a>
+        </div>
+      </div>
+      <div class="main-window">
+        <div class="sub-window-left">
+          <div class="main-form">
+            <h3>User Login</h3>
+            <form action="#">
+              <div class="form-control">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email ID"
+                />
+              </div>
+              <div class="form-control">
+                <select name="rank" id="rank">
+                  <option disabled selected>Select Rank</option>
+                  <option value>RANK 1</option>
+                  <option value>RANK 2</option>
+                  <option value>RANK 3</option>
+                  <option value>RANK 4</option>
+                  <option value>RANK 5</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="form-control">
+                <button type="submit">LOGIN</button>
+              </div>
+              <div class="form-control">
+                <a href="#">forgot password?</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="sub-window-right">
+          <img src="./Image1.png" alt="">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
